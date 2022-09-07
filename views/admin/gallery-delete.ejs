@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="m-5">
+        <h1>Delete Images for Gallery</h1>
+        <form action="/gallery-delete" method="post">
+            <label class="form-label">Select the Images you would like to delete</label>
+            <% let i = 0%>
+            <select name="arrayIndex" id="" class="form-control">
+                <option value="">--please select image--</option>
+                <% for(i = 0; i < gallery.length; i++){ %>
+                    <option value="<%= i %>"><%= gallery[i].caption %></option>
+                <% } %>
+            </select>
+            
+            <button type="submit" class="btn btn-primary mt-3">Continue</button>
+        </form>
+    </div>
+</body>
+
+</html>

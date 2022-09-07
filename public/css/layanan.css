@@ -1,0 +1,166 @@
+/* This is the CSS of the website. 
+You can read this CSS as it is divided:
+per page -> per section (sorted as in webpage) -> Elements -> Classes ->IDs -> sorted alphabethically.
+All Global attributes will be stored in global comments in this css file. */
+
+/* Elements */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #040404;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* Global Attributes */
+    /* Classes */
+
+        .card:hover {
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        }
+
+        .centerDiv {
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .centerItems {
+            text-align: center;
+        }
+
+        .evenBG {
+            background-color: white;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .oddBG {
+            background-color: #E8E4E1;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .parent {
+            display: flex;
+        }
+
+/* Footer Section */
+
+    #Footer_Section .col {
+        margin-bottom: 1rem;
+    }
+
+    #Footer_Section .container-fluid {
+        padding: 3% 15% 3%;
+    }
+
+
+    #Footer_Section .fa-brands:hover {
+        color: #119DA4;
+    }
+
+    /* Classes */
+        
+        .footerIcon {
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
+
+/* Navigation Bar Section */
+        /* Classes */
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .imgBrand {
+            width: 100px;
+        }
+
+/* Layanan Page */
+
+    .card {
+        display: inline-flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 2%;
+        width: 18rem;
+        aspect-ratio: 1/1;
+    }
+
+    .card-text {
+        text-align: left;
+    }
+
+    .modal-body {
+        text-align: justify;
+    }
+
+    .squareImage {
+        background-color: white;
+        width: 3rem;
+        aspect-ratio: 1/1;
+        margin-bottom: 0;
+        margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        .marginLeftRight {
+            margin-left: 10rem;
+            margin-right: 10rem;
+        }
+    }
+
+    /* PIT Section */
+
+        /* Classes */
+
+            .firstSection {
+                padding-top: 5rem;
+            }
+
+            .layananReadMore {
+                color: blue;
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .layananReadMore:hover {
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+    /* PMC Section */
+
+        #PMC_Section .modal-content {
+            background-color: #212529;
+        }
+
+        /* Classes */
+
+            .layananReadMoreDark {
+                color: yellow;
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .layananReadMoreDark:hover {
+                color: yellow;
+                cursor: pointer;
+                text-decoration: underline;
+            }

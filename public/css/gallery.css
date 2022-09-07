@@ -1,0 +1,130 @@
+/* This is the CSS of the website. 
+You can read this CSS as it is divided:
+per page -> per section (sorted as in webpage) -> Elements -> Classes ->IDs -> sorted alphabethically.
+All Global attributes will be stored in global comments in this css file. */
+
+/* Elements */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #040404;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* Global Attributes */
+    /* Classes */
+
+        .card:hover {
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        }
+
+        .centerDiv {
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .centerItems {
+            text-align: center;
+        }
+
+        .evenBG {
+            background-color: white;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .firstSection {
+            padding-top: 5rem;
+        }
+
+        .oddBG {
+            background-color: #E8E4E1;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .parent {
+            display: flex;
+        }
+
+/* Footer Section */
+
+    #Footer_Section .col {
+        margin-bottom: 1rem;
+    }
+
+    #Footer_Section .container-fluid {
+        padding: 3% 15% 3%;
+    }
+
+
+    #Footer_Section .fa-brands:hover {
+        color: #119DA4;
+    }
+
+    /* Classes */
+        
+        .footerIcon {
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
+
+/* Navigation Bar Section */
+        /* Classes */
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .imgBrand {
+            width: 100px;
+        }
+
+
+
+.captionHolder {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    color: rgba(255, 255, 255, 0);
+    transition-duration: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.captionHolder:hover {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageHolder {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+}
+
+/* PICTURE IDs */
+

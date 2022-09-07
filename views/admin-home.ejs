@@ -1,0 +1,77 @@
+<%- include("admin-header") %>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Create
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row text-center">
+            <div class="col">
+              <button class="btn btn-dark btn-lg"><a style="color: white;" href="/blog-create">Blog</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-dark btn-lg"><a style="color: white;" href="/gallery-create">Gallery</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-dark btn-lg"><a style="color: white;" href="/event-create">Event</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed bg-info text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Update
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row text-center">
+            <div class="col">
+              <button class="btn btn-info btn-lg"><a style="color: black;" href="/blog-update">Blog</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-info btn-lg"><a style="color: black;" href="/gallery-update">Gallery</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-info btn-lg"><a style="color: black;" href="/event-update">Event</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Delete
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row text-center">
+            <div class="col">
+              <button class="btn btn-danger btn-lg"><a style="color: white;" href="/blog-delete">Blog</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger btn-lg"><a style="color: white;" href="/gallery-delete">Gallery</a></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger btn-lg"><a style="color: white;" href="/event-delete">Event</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <form action="/signout" method="post">
+      <button type="submit" class="btn btn-secondary btn-lg">Sign out</button>
+    </form>
+  </div>
+
+<%- include("admin-footer") %>

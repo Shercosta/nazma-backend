@@ -1,0 +1,78 @@
+<%- include('header') %>
+
+    <!-- Event Header Section ----------------------------------------------------------------------------->
+
+    <section id="EventHeader_Section">
+        <div class="firstSection">
+            <h1 class="display-1 centerItems">EVENT</h1>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Events ------------------------------------------------------------------------------------->
+
+    <section id="Event_Section">
+        <!-- whole ticket starts here -->
+        
+        <% eventEJS.forEach((element) => { %>
+
+            <div class="row ticket">
+                <div class="col-lg-2">
+                    <p class="monthSmall monthLarge"><%= element.eventMonth %></p>
+                    <p class="dateSmall dateLarge"><%= element.eventDate %></p>
+                </div>
+                <div class="col-lg-5 imageTicket">
+                    <img src="<%= element.eventImage %>"
+                        class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <div class="ticketRight">
+                        <p class="eventTitle"><%= element.eventTitle %></p>
+                        <p class="eventLocation"><%= element.eventAddress %></p>
+                        <p class="eventTime"><%= element.eventTime %></p>
+                        <p class="evenSum"><%= element.eventDescription.slice(0,300) %>...</p>
+                        <div class="ticketBreak">
+                            <hr>
+                            <a data-bs-toggle="modal" data-bs-target="#event-1">
+                                <p class="eventView">Event Details <i class="fa-solid fa-arrow-right"></i></p>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="event-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="event-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel"><%= element.eventTitle %></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="<%= element.eventImage %>"
+                                                alt="" class="img-fluid">
+                                            <br><br>
+                                            <p class="eventLocation"><%= element.eventAddress %></p>
+                                            <br>
+                                            <p class="eventTime"><%= element.eventTime %></p>
+                                            <br>
+                                            <p class="eventFullDesc"><%= element.eventDescription %></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary"><a href="<%= element.regis %>">Register</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="ticketLine">
+            </div>
+
+        <% }); %>
+
+    </section>
+
+<%- include('footer') %>

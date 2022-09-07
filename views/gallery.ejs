@@ -1,0 +1,33 @@
+<%- include('gallery-header') %>
+
+<!-- Gallery Header ----------------------------------------------------------------------------->
+
+<section id="Gallery_Section">
+    <div class="firstSection centerItems">
+        <h1 class="display-3">Gallery</h1>
+    </div>
+</section>
+
+<!-- Images ------------------------------------------------------------------------------------>
+
+<section id="Images_Section">
+    <div class="container-fluid">
+        <div class="row">
+            <% for(let i = 0; i < imagesEjs.length; i++){ %>
+                <div class="col-lg-2 col-md-3 col-sm-6">                    
+                    <div class="imageHolder border rounded" id="picture-<%= i %>">
+                        <div class="captionHolder">
+                            <p><%= imagesEjs[i].caption %></p>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</section>
+
+<!-- jquery script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/gallery.js" charset="utf-8"></script>
+
+<%- include('footer') %>

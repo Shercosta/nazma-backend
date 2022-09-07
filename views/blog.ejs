@@ -1,0 +1,83 @@
+<%- include('header') %>
+
+    <!-- Blog Header ----------------------------------------------------------------------------->
+
+    <section id="BlogHeader_Section">
+        <div class="firstSection">
+            <h1 class="display-3 centerItems">Blog</h1>
+        </div>
+    </section>
+
+    <!-- Articles -------------------------------------------------------------------------------->
+
+    <% for (let i=0; i < articlesEjs.length; i++){ %>
+        <% if (i==0){ %>
+            <!-- Spotlight News -------------------------------------------------------------------------->
+
+            <section id="Spotlight_Section">
+
+                <div class="row evenBG" style="margin-left: 0px; margin-right: 0px;">
+                    <div class="col-12 parent">
+                        <div class="card mb-3 centerDiv text-bg-warning squareAnimation" style="width: 100%;">
+                            <a href="/read/<%= articlesEjs[i].title %>">
+                                <div class="row g-0 verticalMiddle">
+                                    <div class="col-lg-8">
+                                        <img src="<%= articlesEjs[i].image %>"
+                                            class="img-fluid rounded-start spotlightImage" alt="...">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card-body">
+                                            <h5 class="card-title display-4">
+                                                <%= articlesEjs[i].title %>
+                                            </h5>
+                                            <p class="card-text">
+                                                <%= articlesEjs[i].content.slice(0, 500) %>...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <% } %>
+            <% } %>
+                <!-- Non-Spotlight News ---------------------------------------------------------------------->
+
+                <section id="NonSpotlight_Section">
+                    <div class="row evenBG" style="margin-left: 0px; margin-right: 0px;">
+                        <% for (var i = 1; i < articlesEjs.length; i++){ %>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 parent nonSpotCol">
+                                <div class="card centerDiv" style="width: 100%;">
+                                    <a href="/read/<%= articlesEjs[i].title %>">
+                                        <!-- Image Thumbnail for Blog -->
+                                        <img src="<%= articlesEjs[i].image %>" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <!-- Heading for Blog -->
+                                            <h5>
+                                                <%= articlesEjs[i].title %>
+                                            </h5>
+                                            <!-- Summary of the blog -->
+                                            <p class="card-text">
+                                                <%= articlesEjs[i].content.slice(0, 150) %>...
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        <% } %>
+
+
+                    </div>
+
+                </section>
+                
+
+
+                    <!-- jquery script -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <!-- <script src="index.js" charset="utf-8"></script> -->
+
+                    <%- include('footer') %>

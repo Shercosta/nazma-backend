@@ -1,0 +1,173 @@
+/* This is the CSS of the website. 
+You can read this CSS as it is divided:
+per page -> per section (sorted as in webpage) -> Elements -> Classes ->IDs -> sorted alphabethically.
+All Global attributes will be stored in global comments in this css file. */
+
+/* Elements */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #040404;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* Global Attributes */
+    /* Classes */
+
+        .card:hover {
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        }
+
+        .centerDiv {
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .centerItems {
+            text-align: center;
+        }
+
+        .evenBG {
+            background-color: white;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .firstSection {
+            padding-top: 5rem;
+        }
+
+        .oddBG {
+            background-color: #E8E4E1;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .parent {
+            display: flex;
+        }
+
+/* Footer Section */
+
+    #Footer_Section .col {
+        margin-bottom: 1rem;
+    }
+
+    #Footer_Section .container-fluid {
+        padding: 3% 15% 3%;
+    }
+
+
+    #Footer_Section .fa-brands:hover {
+        color: #119DA4;
+    }
+
+    /* Classes */
+        
+        .footerIcon {
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
+
+/* Navigation Bar Section */
+        /* Classes */
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .imgBrand {
+            width: 100px;
+        }
+
+.ticket {
+    margin: auto 3%;
+    display: inline-flex;
+    
+}
+
+@media screen and (max-width: 835px) {
+    .dateSmall {
+        font-size: 200%;
+        display: inline;
+    }
+    
+    .monthSmall {
+        font-size: 125%;
+        display: inline;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 835px) {
+    
+    .dateLarge {
+        font-size: 300%;
+    }
+    
+    .monthLarge {
+        font-size: 150%;
+        text-decoration: underline;
+    }
+
+    .ticketRight {
+        position: relative;
+        height: 100%;
+    }
+
+    .ticketBreak {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .imageTicket img{
+        aspect-ratio: 2/1;
+        object-fit: contain;
+    }
+}
+
+.ticketLine {
+    margin: 3% auto;
+    border-style: dotted none none none;
+    border-width: 10px;
+    border-color: grey;
+    width: 20%;
+}
+
+.eventTitle {
+    font-size: 150%;
+    font-weight: 800;
+}
+
+.eventLocation {
+    font-weight: lighter;
+}
+
+.eventTime {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.eventView:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: grey;
+}
+
+.eventFullDesc {
+    white-space: pre-wrap;
+}

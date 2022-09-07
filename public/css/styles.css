@@ -1,0 +1,277 @@
+/* This is the CSS of the website. 
+You can read this CSS as it is divided:
+per page -> per section (sorted as in webpage) -> Elements -> Classes ->IDs -> sorted alphabethically.
+All Global attributes will be stored in global comments in this css file. */
+
+/* Elements */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #040404;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* Global Attributes */
+    /* Classes */
+
+        .card:hover {
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        }
+
+        .centerDiv {
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .centerItems {
+            text-align: center;
+        }
+
+        .evenBG {
+            background-color: white;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .oddBG {
+            background-color: #E8E4E1;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .parent {
+            display: flex;
+        }
+
+/* Footer Section */
+
+    #Footer_Section .col {
+        margin-bottom: 1rem;
+    }
+
+    #Footer_Section .container-fluid {
+        padding: 3% 15% 3%;
+    }
+
+
+    #Footer_Section .fa-brands:hover {
+        color: #119DA4;
+    }
+    
+    /* Classes */
+        
+        .footerIcon {
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
+
+/* Navigation Bar Section */
+        /* Classes */
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .imgBrand {
+            width: 100px;
+        }
+
+/* Home Page */
+
+    /* Home Section */
+        /* Classes */
+
+            .homeImageCrop {
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1;
+            }
+
+            .homeSect {
+                padding-left: 0;
+            }
+
+            .homeSectRight {
+                background-color: #E8E4E1;
+                min-height: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .homeTextLarge {
+                margin: 40% 3rem 2rem 3rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .homeTextSmall {
+                margin: 2rem 1rem 2rem 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+    /* About Us Section */
+        /* Classes */
+            
+            .margin-l-10-r-10-percent {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+    
+    /* Layanan Section */
+        /* Classes */
+            
+            .blankTab {
+                width: 25%;
+            }
+
+            .cardTinyImage {
+                height: 40%;
+                width: 40%;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .layananCard {
+                padding-top: 3rem;
+                padding-bottom: 4rem;
+            }
+
+            .layananTab {
+                margin-top: 1.2rem;
+                padding-bottom: 3rem;
+            }
+
+    /* Achievement Section */
+        /* Classes */
+
+            .achievementCol {
+                background-color: white;
+                height: 5rem;
+                width: 18rem;
+                margin: 1rem;
+            }
+
+            .fa-trophy {
+                color: #30318B;
+            }
+
+            .FontAwesomeLogo {
+                font-size: 3rem;
+            }
+
+    /* Client Section */
+        /* Classes */
+
+            .clientCaption {
+                font-size: 200%;
+            }
+            
+            /* .clientCard {
+                display: inline-flex;
+                margin: 2rem;
+            } */
+
+            .clientIdentity {
+                margin-left: 1rem;
+                display: inline-block;
+            }
+
+            .clientImage {
+                width: 6rem;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+                display: inline-block;
+            }
+
+            /* .clientName {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                text-align: right;
+            } */
+
+            .clientSlide {
+                /* height: 90vh; */
+                margin: auto 15%;
+            }
+
+            /* .clientTop {
+                height: 60vh;
+            } */
+
+            .topBottomDivider {
+                margin-top: 2rem;
+            }
+
+            .verticalMiddle {
+                display:flex;
+                align-items:center;
+            }
+
+    /* Trainer Section */
+        /* Classes */
+
+        @media screen and (min-width: 834px) {
+            #Trainer_Section {
+                margin-left: 10rem;
+                margin-right: 10rem;
+            }
+        }
+            
+            .trainerCard {
+                display: inline-flex;
+                margin: 0.7rem;
+                width: 15rem;
+                height: 18rem;
+                text-align: center;
+            }
+
+    /* Partner Section */
+
+        #Partner_Section .col {
+            margin-top: 2%;
+        }
+
+        #Partner_Section .container-fluid {
+            padding-bottom: 2rem;
+        }
+
+        #Partner_Section img {
+            display: inline-block;
+            width: 15%;
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+        }
+
+        /* Classes */
+
+            .boxPartner {
+                display: inline-flex;
+                background-color: white;
+                max-width: 10em;
+                min-width: 2em;
+                width: 17%;
+                aspect-ratio: 1/1;
+            }
+            
+            .imgPartner {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                padding: 2%;
+            }

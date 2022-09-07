@@ -1,0 +1,132 @@
+/* This is the CSS of the website. 
+You can read this CSS as it is divided:
+per page -> per section (sorted as in webpage) -> Elements -> Classes ->IDs -> sorted alphabethically.
+All Global attributes will be stored in global comments in this css file. */
+
+/* Elements */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: #040404;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* Global Attributes */
+    /* Classes */
+
+        .card:hover {
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            cursor: pointer;
+        }
+
+        .centerDiv {
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .centerItems {
+            text-align: center;
+        }
+
+        .evenBG {
+            background-color: white;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .firstSection {
+            padding-top: 5rem;
+        }
+
+        .oddBG {
+            background-color: #E8E4E1;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+        }
+
+        .parent {
+            display: flex;
+        }
+
+/* Footer Section */
+
+    #Footer_Section .col {
+        margin-bottom: 1rem;
+    }
+
+    #Footer_Section .container-fluid {
+        padding: 3% 15% 3%;
+    }
+
+
+    #Footer_Section .fa-brands:hover {
+        color: #119DA4;
+    }
+
+    /* Classes */
+        
+        .footerIcon {
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
+
+/* Navigation Bar Section */
+        /* Classes */
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .imgBrand {
+            width: 100px;
+        }
+
+/* Blog Page */
+
+    /* body {
+        margin: auto 3%;
+    } */
+
+    .articleContent {
+        white-space: pre-wrap;
+    }
+
+    /* Spotlight */
+
+        .verticalMiddle {
+            display:flex;
+            align-items:center;
+        }
+
+        .spotlightImage {
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* Non Spotlight */
+
+        #NonSpotlight_Section .card {
+            height: 100%;
+        }
+
+        .card-img-top {
+            aspect-ratio: 2 / 1;
+            object-fit: cover;
+        }
+
+        .nonSpotCol {
+            padding-bottom: 1.5rem;
+        }
