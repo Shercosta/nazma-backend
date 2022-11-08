@@ -14,5 +14,13 @@
     "express": "^4.18.1",
     "localtunnel": "^2.0.2",
     "lodash": "^4.17.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shercosta/nazma-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shercosta/nazma-backend/issues"
+  },
+  "homepage": "https://github.com/Shercosta/nazma-backend#readme"
 }
