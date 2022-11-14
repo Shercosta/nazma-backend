@@ -162,7 +162,7 @@ app.post("/blog-create", (req, res) => {
         content: req.body.createBlogContent
     }
     article.unshift(newpost);
-    res.redirect("blog")
+    res.redirect("admin/home")
 });
 
 app.get("/read/:blogParams", (req, res) => {
@@ -196,7 +196,7 @@ app.get("/blog-delete", (req, res) => {
 app.post("/blog-delete", (req, res) => {
     changeIndex = Number(req.body.articleNumber);
     article.splice(changeIndex, 1);
-    res.redirect("/blog");
+    res.redirect("admin/home");
 })
 
 
@@ -220,7 +220,7 @@ app.post("/blog-update-2", (req, res) => {
         content: req.body.createBlogContent
     }
     article[changeIndex] = newpost;
-    res.redirect("blog")
+    res.redirect("admin/home")
 })
 
 
@@ -246,7 +246,7 @@ app.post("/gallery-create", (req, res) => {
         caption: req.body.createGalleryCaption
     }
     gallery.unshift(newpic);
-    res.redirect("/gallery");
+    res.redirect("admin/home");
 });
 
 app.get("/gallery-update", (req, res) => {
@@ -276,7 +276,7 @@ app.post("/gallery-update-2", (req, res) => {
         caption: req.body.createGalleryCaption
     }
     gallery[changeIndex] = newpic;
-    res.redirect("/gallery");
+    res.redirect("admin/home");
 })
 
 app.get("/gallery-delete", (req, res) => {
@@ -291,7 +291,7 @@ app.get("/gallery-delete", (req, res) => {
 app.post("/gallery-delete", (req, res) => {
     changeIndex = Number(req.body.arrayIndex);
     gallery.splice(changeIndex, 1);
-    res.redirect("/gallery");
+    res.redirect("admin/home");
 })
 
 
@@ -366,7 +366,7 @@ app.post("/event-create", (req, res) => {
         regis: req.body.createEventregis
     }
     events.unshift(newevent);
-    res.redirect("/event");
+    res.redirect("admin/home");
 })
 
 app.get("/event-update", (req, res) => {
@@ -435,7 +435,7 @@ app.post("/event-update-2", (req, res) => {
             mon = "Nov"
             break;
         case "12":
-            mon = "Des"
+            mon = "Dec"
             break;
 
     }
@@ -451,7 +451,7 @@ app.post("/event-update-2", (req, res) => {
         regis: req.body.crateEventRegis
     }
     events[changeIndex] = newevent;
-    res.redirect("/event");
+    res.redirect("admin/home");
 })
 
 app.get("/event-delete", (req, res) => {
@@ -466,7 +466,7 @@ app.get("/event-delete", (req, res) => {
 app.post("/event-delete", (req, res) => {
     changeIndex = Number(req.body.arrayIndex);
     events.splice(changeIndex, 1);
-    res.redirect("/event");
+    res.redirect("admin/home");
 })
 
 
