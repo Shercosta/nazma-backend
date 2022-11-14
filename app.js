@@ -477,7 +477,12 @@ app.get("/admin", (req, res) => {
     // if (invalidAdmin) {
     //     adminStatement = "Invalid admin Email or Password!";
     // }
-    res.render("admin", { invalidAdmin: adminStatement });
+    if (authorized) {
+        res.redirect("admin/home")
+    }
+    else{
+        res.render("admin", { invalidAdmin: adminStatement });
+    }
 });
 
 app.post("/admin", (req, res) => {
@@ -491,6 +496,9 @@ app.post("/admin", (req, res) => {
                 authorized = true;
                 adminStatement = "";
                 res.redirect("/admin/home");
+                setTimeout(() => {
+                    authorized = false;
+                }, 10800000);
                 break;
             }
         }
