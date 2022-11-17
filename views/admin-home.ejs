@@ -1,12 +1,17 @@
 <%- include("admin-header") %>
-<div class="accordion" id="accordionExample">
+
+<h1 style="text-align: center;">Create, Update and Delete for Blog, Image, and Event</h1>
+
+  <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Create
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <div class="row text-center">
             <div class="col">
@@ -24,11 +29,13 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed bg-info text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="accordion-button collapsed bg-info text-dark" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Update
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <div class="row text-center">
             <div class="col">
@@ -46,11 +53,13 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Delete
         </button>
       </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <div class="row text-center">
             <div class="col">
@@ -68,10 +77,25 @@
     </div>
   </div>
 
+  <br>
+
+  <div class="row">
+    <div class="col text-center">
+      <form action="/ongoingProjectEdit" method="get">
+        <button type="submit" class="btn btn-success">Edit Ongoing Project</button>
+      </form>
+    </div>
+  </div>
+
+  <br>
+
+  <h1></h1>
+
+
   <div class="text-center">
     <form action="/signout" method="post">
       <button type="submit" class="btn btn-secondary btn-lg">Sign out</button>
     </form>
   </div>
 
-<%- include("admin-footer") %>
+  <%- include("admin-footer") %>

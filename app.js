@@ -12,8 +12,17 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
+const ongoingProjects = ["Onproj 1", "Onproj 2", "Onproj 3", "Onproj 4", "Onproj 5", "Onproj 6"]
+
+
 app.get("/", function (req, res) {
-    res.render("home", { cssEjs: "styles" });
+    res.render("home", { cssEjs: "styles",
+    Project1: ongoingProjects[0],
+    Project2: ongoingProjects[1],
+    Project3: ongoingProjects[2], 
+    Project4: ongoingProjects[3], 
+    Project5: ongoingProjects[4], 
+    Project6: ongoingProjects[5] });
 });
 
 const events = [
@@ -138,6 +147,32 @@ const gallery = [
 let authorized = false; //////////////////////////////////////////////////////////////  AUTHORIZATION
 let changeIndex = -1;/////////////////////////////////////////////////////////////////////  INDEX PARAMETER FOR UPDATE
 
+/////////////////////////////////////////////////////////////////////////////////////   ONGOING PROJECT
+
+app.get("/ongoingProjectEdit", (req, res) => {
+    if (!authorized) {
+        res.redirect("/not-authorized");
+    }
+    if (authorized) {
+        res.render("admin/ongoing-project-edit", { 
+            Project1: ongoingProjects[0],
+            Project2: ongoingProjects[1],
+            Project3: ongoingProjects[2], 
+            Project4: ongoingProjects[3], 
+            Project5: ongoingProjects[4], 
+            Project6: ongoingProjects[5] } );
+    }
+})
+
+app.post("/ongoingProjectEdit", (req, res) => {
+    ongoingProjects[0] = req.body.proj1
+    ongoingProjects[1] = req.body.proj2
+    ongoingProjects[2] = req.body.proj3
+    ongoingProjects[3] = req.body.proj4
+    ongoingProjects[4] = req.body.proj5
+    ongoingProjects[5] = req.body.proj6
+    res.redirect("admin/home")
+})
 
 /////////////////////////////////////////////////////////////////////////////////////   BLOG
 
