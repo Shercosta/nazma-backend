@@ -14,6 +14,56 @@ app.set('view engine', 'ejs');
 
 const ongoingProjects = ["Onproj 1", "Onproj 2", "Onproj 3", "Onproj 4", "Onproj 5", "Onproj 6"]
 
+const testimony = [
+    {
+        cliPic: "https://img.freepik.com/premium-photo/indonesian-man-smiling_86639-992.jpg",
+        cliName: "Chandra Kilau",
+        cliRev: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan ex semper neque aliquam tempus."
+    },
+    {
+        cliPic: "https://img.freepik.com/premium-photo/asian-woman-white-t-shirt-stand-smiling-with-braces-white-background_2034-2735.jpg",
+        cliName: "Kayla Rufikasari",
+        cliRev: "Vestibulum urna sapien, tincidunt quis euismod sed, elementum id erat. Nunc velit orci, congue ut sceler."
+    },
+    {
+        cliPic: "https://www.accenture.com/t20220614T031106Z__w__/id-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Local/General/143/Accenture-Jayant-400x400.jpg",
+        cliName: "John Farquaad",
+        cliRev: "Aliquam eu sollicitudin leo. Aliquam erat volutpat. Etiam pharetra, massa nec ultrices sollicitudin enim."
+    }
+]
+
+app.get("/testimonyEdit", (req, res) => {
+    if (!authorized) {
+        res.redirect("/not-authorized");
+    }
+    if (authorized) {
+        res.render("admin/testimony-edit", {
+            clientImage1: testimony[0].cliPic,
+            clientName1: testimony[0].cliName,
+            clientReview1: testimony[0].cliRev,
+            clientImage2: testimony[1].cliPic,
+            clientName2: testimony[1].cliName,
+            clientReview2: testimony[1].cliRev,
+            clientImage3: testimony[2].cliPic,
+            clientName3: testimony[2].cliName,
+            clientReview3: testimony[2].cliRev
+        });
+    }
+})
+
+app.post("/testimonyEdit", (req, res) => {
+    testimony[0].cliPic = req.body.clientImage1
+    testimony[0].cliName = req.body.clientName1
+    testimony[0].cliRev = req.body.clientReview1
+    testimony[1].cliPic = req.body.clientImage2
+    testimony[1].cliName = req.body.clientName2
+    testimony[1].cliRev = req.body.clientReview2
+    testimony[2].cliPic = req.body.clientImage3
+    testimony[2].cliName = req.body.clientName3
+    testimony[2].cliRev = req.body.clientReview3
+
+    res.redirect("/admin")
+})
 
 app.get("/", function (req, res) {
     res.render("home", { cssEjs: "styles",
@@ -22,7 +72,16 @@ app.get("/", function (req, res) {
     Project3: ongoingProjects[2], 
     Project4: ongoingProjects[3], 
     Project5: ongoingProjects[4], 
-    Project6: ongoingProjects[5] });
+    Project6: ongoingProjects[5],
+    clientImage1: testimony[0].cliPic,
+    clientName1: testimony[0].cliName,
+    clientReview1: testimony[0].cliRev,
+    clientImage2: testimony[1].cliPic,
+    clientName2: testimony[1].cliName,
+    clientReview2: testimony[1].cliRev,
+    clientImage3: testimony[2].cliPic,
+    clientName3: testimony[2].cliName,
+    clientReview3: testimony[2].cliRev });
 });
 
 const events = [
@@ -144,7 +203,7 @@ const gallery = [
     }
 ];
 
-let authorized = false; //////////////////////////////////////////////////////////////  AUTHORIZATION
+let authorized = true; //////////////////////////////////////////////////////////////  AUTHORIZATION
 let changeIndex = -1;/////////////////////////////////////////////////////////////////////  INDEX PARAMETER FOR UPDATE
 
 /////////////////////////////////////////////////////////////////////////////////////   ONGOING PROJECT
@@ -563,6 +622,8 @@ app.post("/signout", (req, res) => {
 app.get("/not-authorized", (req, res) => {
     res.render("admin/unauthorized");
 });
+
+app.all('/:action', function(req, res){})
 
 app.get("/:page", (req, res) => {
     const requestedPage = req.params.page;
