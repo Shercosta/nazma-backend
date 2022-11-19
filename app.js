@@ -203,7 +203,7 @@ const gallery = [
     }
 ];
 
-let authorized = true; //////////////////////////////////////////////////////////////  AUTHORIZATION
+let authorized = false; //////////////////////////////////////////////////////////////  AUTHORIZATION
 let changeIndex = -1;/////////////////////////////////////////////////////////////////////  INDEX PARAMETER FOR UPDATE
 
 /////////////////////////////////////////////////////////////////////////////////////   ONGOING PROJECT
@@ -623,12 +623,12 @@ app.get("/not-authorized", (req, res) => {
     res.render("admin/unauthorized");
 });
 
-app.all('/:action', function(req, res){})
-
 app.get("/:page", (req, res) => {
     const requestedPage = req.params.page;
     res.render(requestedPage, { cssEjs: requestedPage });
 });
+
+app.all('/:action', function(req, res){})
 
 app.listen(process.env.PORT || 2700, () => {
     console.log("Server is runnin on port 2700");
