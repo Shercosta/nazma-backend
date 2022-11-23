@@ -193,53 +193,28 @@
 
     <!-- Trainer Section ---------------------------------------------------------------------------------->
 
+    <% if (trainer.length != 0) { %>
     <section id="Trainer_Section">
         <div class="container-fluid evenBG centerItems">
             <h2>Certified Trainers</h2>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card text-bg-info trainerCard">
-                        <img src="https://media.istockphoto.com/photos/businessman-walking-in-the-streets-of-kuala-lumpur-picture-id984156760?k=20&m=984156760&s=612x612&w=0&h=dblq99sFhlQT2BsBL5G0V4a62zS5biP08lydUtOCFKU="
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Person 1<br><strong>Bidang
-                                    Tersertifikasi</strong></p>
+                <% for(let i = 0; i < trainer.length; i++){ %>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card text-bg-info trainerCard">
+                            <img src="<%= trainer[i].image %>"
+                                class="card-img-top imgCard" alt="...">
+                            <div class="card-body">
+                                <p class="card-text"><%= trainer[i].name %><br><strong><%= trainer[i].expertise %></strong></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card text-bg-info trainerCard">
-                        <img src="https://media.istockphoto.com/photos/businessman-walking-in-the-streets-of-kuala-lumpur-picture-id984156760?k=20&m=984156760&s=612x612&w=0&h=dblq99sFhlQT2BsBL5G0V4a62zS5biP08lydUtOCFKU="
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Person 3<br><strong>Bidang
-                                    Tersertifikasi</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card text-bg-info trainerCard">
-                        <img src="https://media.istockphoto.com/photos/businessman-walking-in-the-streets-of-kuala-lumpur-picture-id984156760?k=20&m=984156760&s=612x612&w=0&h=dblq99sFhlQT2BsBL5G0V4a62zS5biP08lydUtOCFKU="
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Person 4<br><strong>Bidang
-                                    Tersertifikasi</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card text-bg-info trainerCard">
-                        <img src="https://media.istockphoto.com/photos/businessman-walking-in-the-streets-of-kuala-lumpur-picture-id984156760?k=20&m=984156760&s=612x612&w=0&h=dblq99sFhlQT2BsBL5G0V4a62zS5biP08lydUtOCFKU="
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Person 2<br><strong>Bidang
-                                    Tersertifikasi</strong></p>
-                        </div>
-                    </div>
-                </div>
+
+                <% } %>
+                
             </div>
         </div>
     </section>
+    <% } %>
 
     <!-- Partner Section --------------------------------------------------------------------------------->
 

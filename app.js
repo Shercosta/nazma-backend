@@ -14,6 +14,8 @@ app.set('view engine', 'ejs');
 
 const ongoingProjects = ["Onproj 1", "Onproj 2", "Onproj 3", "Onproj 4", "Onproj 5", "Onproj 6"]
 
+/////////////////////////////////////////////////////////////////////////////////////   Testimony
+
 const testimony = [
     {
         cliPic: "https://img.freepik.com/premium-photo/indonesian-man-smiling_86639-992.jpg",
@@ -65,6 +67,47 @@ app.post("/testimonyEdit", (req, res) => {
     res.redirect("/admin")
 })
 
+/////////////////////////////////////////////////////////////////////////////////////   Trainer
+
+const certifiedTrainer = []
+
+app.get("/trainerAdd", (req, res) => {
+    if (!authorized) {
+        res.redirect("/not-authorized");
+    }
+    if (authorized) {
+        res.render("admin/trainerAdd")
+    }
+})
+
+app.post("/trainerAdd", (req, res) => {
+    const trainerTemp = {
+        image: req.body.trainerPic,
+        name: req.body.trainerName,
+        expertise: req.body.trainerExpertise
+    }
+
+    certifiedTrainer.unshift(trainerTemp)
+    res.redirect("admin/home")
+})
+
+app.get("/trainerRemove", (req, res) => {
+    if (!authorized) {
+        res.redirect("/not-authorized");
+    }
+    if (authorized) {
+        res.render("admin/trainerRemove", {
+            profile: certifiedTrainer
+        })
+    }
+})
+
+app.post("/trainerRemove", (req, res) => {
+    changeIndex = Number(req.body.trainerProfile);
+    certifiedTrainer.splice(changeIndex, 1);
+    res.redirect("admin/home");
+})
+
 app.get("/", function (req, res) {
     res.render("home", { cssEjs: "styles",
     Project1: ongoingProjects[0],
@@ -81,7 +124,8 @@ app.get("/", function (req, res) {
     clientReview2: testimony[1].cliRev,
     clientImage3: testimony[2].cliPic,
     clientName3: testimony[2].cliName,
-    clientReview3: testimony[2].cliRev });
+    clientReview3: testimony[2].cliRev,
+    trainer: certifiedTrainer });
 });
 
 const events = [
@@ -203,7 +247,7 @@ const gallery = [
     }
 ];
 
-let authorized = false; //////////////////////////////////////////////////////////////  AUTHORIZATION
+let authorized = true; //////////////////////////////////////////////////////////////  AUTHORIZATION
 let changeIndex = -1;/////////////////////////////////////////////////////////////////////  INDEX PARAMETER FOR UPDATE
 
 /////////////////////////////////////////////////////////////////////////////////////   ONGOING PROJECT
