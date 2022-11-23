@@ -226,6 +226,11 @@ p {
     /* Trainer Section */
         /* Classes */
 
+        .imgCard {
+            aspect-ratio: 5/4;
+            object-fit: contain;
+        }
+
         @media screen and (min-width: 834px) {
             #Trainer_Section {
                 margin-left: 10rem;
