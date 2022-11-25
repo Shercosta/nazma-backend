@@ -94,31 +94,6 @@ const certifiedTrainer = [
         image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
         name: "Geizka Rozilia Ruicosta",
         expertise: "Fullstack Web Developer"
-    },
-    {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
-    },
-    {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
-    },
-    {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
-    },
-    {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
-    },
-    {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
     }
 ]
 
