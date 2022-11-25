@@ -118,16 +118,16 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
             }
 
             .homeTextLarge {
-                font-family: 'Concert One', cursive;
-                font-size: 3rem;
-                margin: 40% 3rem 2rem 3rem;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 5rem;
+                margin: 30% 3rem 2rem 3rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
 
             .homeTextSmall {
-                font-family: 'Concert One', cursive;
-                font-size: x-large;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3rem;
                 margin: 2rem 1rem 2rem 1rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -231,9 +231,15 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
                 display:flex;
                 align-items:center;
             }
+        
 
     /* Trainer Section */
         /* Classes */
+
+        .scrollable {
+            overflow: auto;
+            white-space: nowrap;
+        }
 
         .imgCard {
             aspect-ratio: 5/4;

@@ -261,9 +261,9 @@
 <section id="Trainer_Section">
   <div class="container-fluid evenBG centerItems">
     <h2>Certified Trainers</h2>
-    <div class="row">
+    <div class="scrollable">
       <% for(let i = 0; i < trainer.length; i++){ %>
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <!-- <div class="col-lg-3 col-md-6 col-sm-12"> -->
         <div class="card text-bg-info trainerCard">
           <img
             src="<%= trainer[i].image %>"
@@ -278,7 +278,7 @@
             </p>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
 
       <% } %>
     </div>
