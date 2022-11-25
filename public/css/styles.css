@@ -18,10 +18,15 @@ footer {
 
 h2 {
     text-align: center;
+    font-family: 'Zilla Slab', serif;
 }
 
 p {
     margin: 0;
+}
+
+body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
+    font-family: 'Rubik', sans-serif;
 }
 
 /* Global Attributes */
@@ -113,12 +118,16 @@ p {
             }
 
             .homeTextLarge {
-                margin: 40% 3rem 2rem 3rem;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 5rem;
+                margin: 30% 3rem 2rem 3rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
 
             .homeTextSmall {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3rem;
                 margin: 2rem 1rem 2rem 1rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -222,9 +231,15 @@ p {
                 display:flex;
                 align-items:center;
             }
+        
 
     /* Trainer Section */
         /* Classes */
+
+        .scrollable {
+            overflow: auto;
+            white-space: nowrap;
+        }
 
         .imgCard {
             aspect-ratio: 5/4;

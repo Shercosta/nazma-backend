@@ -18,10 +18,15 @@ footer {
 
 h2, h3 {
     text-align: center;
+    font-family: 'Zilla Slab', serif;
 }
 
 p {
     margin: 0;
+}
+
+body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
+    font-family: 'Rubik', sans-serif;
 }
 
 /* Global Attributes */
@@ -109,7 +114,7 @@ p {
     }
 
     .squareImage {
-        background-color: white;
+        /* background-color: white; */
         width: 3rem;
         aspect-ratio: 1/1;
         margin-bottom: 0;
