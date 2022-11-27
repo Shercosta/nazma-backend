@@ -170,7 +170,7 @@ const events = [
 const admins = [
     {
         email: "nazmaoffice007@gmail.com",
-        password: "AlmightyGods"
+        password: "JogjaNaZMa123"
     },
     {
         email: "punchsupersaga@gmail.com",
