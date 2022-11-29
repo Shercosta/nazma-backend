@@ -71,29 +71,29 @@ app.post("/testimonyEdit", (req, res) => {
 
 const certifiedTrainer = [
     {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
+        image: "https://cdn.icon-icons.com/icons2/1674/PNG/512/person_110935.png",
+        name: "Person Name",
+        expertise: "Person Expertise"
     },
     {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
+        image: "https://cdn.icon-icons.com/icons2/1674/PNG/512/person_110935.png",
+        name: "Person Name",
+        expertise: "Person Expertise"
     },
     {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
+        image: "https://cdn.icon-icons.com/icons2/1674/PNG/512/person_110935.png",
+        name: "Person Name",
+        expertise: "Person Expertise"
     },
     {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
+        image: "https://cdn.icon-icons.com/icons2/1674/PNG/512/person_110935.png",
+        name: "Person Name",
+        expertise: "Person Expertise"
     },
     {
-        image: "https://i.ibb.co/d788V7r/Comp-2-0-00-00-00.png",
-        name: "Geizka Rozilia Ruicosta",
-        expertise: "Fullstack Web Developer"
+        image: "https://cdn.icon-icons.com/icons2/1674/PNG/512/person_110935.png",
+        name: "Person Name",
+        expertise: "Person Expertise"
     }
 ]
 
