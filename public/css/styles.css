@@ -155,7 +155,7 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
             }
 
             .homeTextLarge {
-                font-family: 'Bebas Neue', cursive;
+                font-family: 'Damion', cursive;
                 font-size: 5rem;
                 margin: 30% 3rem 2rem 3rem;
                 padding-left: 1rem;
@@ -163,7 +163,7 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
             }
 
             .homeTextSmall {
-                font-family: 'Bebas Neue', cursive;
+                font-family: 'Damion', cursive;
                 font-size: 3rem;
                 margin: 2rem 1rem 2rem 1rem;
                 padding-left: 1rem;
@@ -291,7 +291,7 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
         }
 
         .text-bg-nazmaOrange {
-            color: #000 !important;
+            color: #FFF !important;
             background-color: RGBA(245, 130, 31, var(--bs-bg-opacity, 1)) !important;
           }
             
