@@ -108,9 +108,14 @@
 
 
   <div class="text-center">
-    <form action="/signout" method="post">
-      <button type="submit" class="btn btn-secondary btn-lg">Sign out</button>
+    <form action="/signout" method="post" class="d-inline-block">
+      <button type="submit" class="btn btn-warning btn-lg">Sign out</button>
+    </form>
+    <form action="/" method="get" class="d-inline-block">
+      <button type="submit" class="btn btn-info btn-lg">Go to NaZMa Office Home</button>
     </form>
   </div>
+
+
 
   <%- include("admin-footer") %>
