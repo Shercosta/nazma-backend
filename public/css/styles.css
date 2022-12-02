@@ -289,6 +289,11 @@ body:not(h1, h2, .homeTextLarge, .homeTextSmall) {
                 margin-right: 10rem;
             }
         }
+
+        .text-bg-nazmaOrange {
+            color: #000 !important;
+            background-color: RGBA(245, 130, 31, var(--bs-bg-opacity, 1)) !important;
+          }
             
             .trainerCard {
                 display: inline-flex;
