@@ -13,6 +13,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 const ongoingProjects = ["Onproj 1", "Onproj 2", "Onproj 3", "Onproj 4", "Onproj 5", "Onproj 6"]
+const ongoingProjectLinks = ["#", "#", "#", "#", "#", "#"]
 
 /////////////////////////////////////////////////////////////////////////////////////   Testimony
 
@@ -142,6 +143,12 @@ app.get("/", function (req, res) {
     Project4: ongoingProjects[3], 
     Project5: ongoingProjects[4], 
     Project6: ongoingProjects[5],
+    projectLink1: ongoingProjectLinks[0],
+    projectLink2: ongoingProjectLinks[1],
+    projectLink3: ongoingProjectLinks[2], 
+    projectLink4: ongoingProjectLinks[3], 
+    projectLink5: ongoingProjectLinks[4], 
+    projectLink6: ongoingProjectLinks[5],
     clientImage1: testimony[0].cliPic,
     clientName1: testimony[0].cliName,
     clientReview1: testimony[0].cliRev,
@@ -289,7 +296,13 @@ app.get("/ongoingProjectEdit", (req, res) => {
             Project3: ongoingProjects[2], 
             Project4: ongoingProjects[3], 
             Project5: ongoingProjects[4], 
-            Project6: ongoingProjects[5] } );
+            Project6: ongoingProjects[5],
+            projectLink1: ongoingProjectLinks[0],
+            projectLink2: ongoingProjectLinks[1],
+            projectLink3: ongoingProjectLinks[2], 
+            projectLink4: ongoingProjectLinks[3], 
+            projectLink5: ongoingProjectLinks[4], 
+            projectLink6: ongoingProjectLinks[5] } );
     }
 })
 
@@ -300,6 +313,12 @@ app.post("/ongoingProjectEdit", (req, res) => {
     ongoingProjects[3] = req.body.proj4
     ongoingProjects[4] = req.body.proj5
     ongoingProjects[5] = req.body.proj6
+    ongoingProjectLinks[0] = req.body.projLink1
+    ongoingProjectLinks[1] = req.body.projLink2
+    ongoingProjectLinks[2] = req.body.projLink3
+    ongoingProjectLinks[3] = req.body.projLink4
+    ongoingProjectLinks[4] = req.body.projLink5
+    ongoingProjectLinks[5] = req.body.projLink6
     res.redirect("admin/home")
 })
 
@@ -662,7 +681,7 @@ app.post("/admin", (req, res) => {
                 res.redirect("/admin/home");
                 setTimeout(() => {
                     authorized = false;
-                }, 10800000);
+                }, 1800000);
                 break;
             }
         }
@@ -701,5 +720,5 @@ app.get("/:page", (req, res) => {
 app.all('/:action', function(req, res){})
 
 app.listen(process.env.PORT || 2700, () => {
-    console.log("Server is runnin on port 2700");
+    console.log("Server is runnin on port http://localhost:2700");
 });
