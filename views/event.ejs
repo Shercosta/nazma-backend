@@ -15,7 +15,7 @@
     <section id="Event_Section">
         <!-- whole ticket starts here -->
         
-        <% eventEJS.forEach((element) => { %>
+        <% eventEJS.forEach((element, i) => { %>
 
             <div class="row ticket">
                 <div class="col-lg-2">
@@ -34,11 +34,11 @@
                         <p class="evenSum"><%= element.eventDescription.slice(0,300) %>...</p>
                         <div class="ticketBreak">
                             <hr>
-                            <a data-bs-toggle="modal" data-bs-target="#event-1">
+                            <a data-bs-toggle="modal" data-bs-target="#event-<%= i %>">
                                 <p class="eventView">Event Details <i class="fa-solid fa-arrow-right"></i></p>
                             </a>
                             <!-- Modal -->
-                            <div class="modal fade" id="event-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            <div class="modal fade" id="event-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false"
                                 tabindex="-1" aria-labelledby="event-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                                     <div class="modal-content">

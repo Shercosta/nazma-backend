@@ -1,29 +1,50 @@
 {
-  "name": "nazma-backend",
-  "version": "1.0.0",
-  "description": "NaZMa Website with Backend",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "lt --p 2700"
+  "name": "todos-express-starter",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Starter todo app using Express, Passport, and SQLite for sign in.",
+  "keywords": [
+    "example",
+    "express",
+    "passport",
+    "sqlite"
+  ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "https://www.jaredhanson.me/"
   },
-  "author": "Shercosta",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "localtunnel": "^2.0.2",
-    "lodash": "^4.17.21",
-    "nodemon": "^2.0.20"
-  },
+  "homepage": "https://github.com/passport/todos-express-starter",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shercosta/nazma-backend.git"
+    "url": "git://github.com/passport/todos-express-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/Shercosta/nazma-backend/issues"
+    "url": "https://github.com/passport/todos-express-starter/issues"
   },
-  "homepage": "https://github.com/Shercosta/nazma-backend#readme"
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jaredhanson"
+  },
+  "license": "Unlicense",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "connect-sqlite3": "^0.9.13",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.6.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "mkdirp": "^1.0.4",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pluralize": "^8.0.0",
+    "sqlite3": "^5.0.2"
+  }
 }
