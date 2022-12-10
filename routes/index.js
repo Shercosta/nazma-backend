@@ -783,6 +783,10 @@ router.get("/not-authorized", (req, res) => {
 //   });
 // });
 
+// const http = require('http');
 
+setInterval(() => {
+  router.get("http://nazmaoffice.herokuapp.com");
+}, 25 * 60 * 1000); // every 25 minutes
 
 module.exports = router;
