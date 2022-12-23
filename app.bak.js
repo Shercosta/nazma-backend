@@ -1,24 +1,20 @@
 require('dotenv').config();
 
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const passport = require('passport');
-const session = require('express-session');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var passport = require('passport');
+var session = require('express-session');
 const bodyParser = require('body-parser');
 
-const MySQLStore = require('express-mysql-session')(session);
-const db = require('./models');
-const indexRouter = require('./routes/index');
-const authRouter = require('./routes/auth');
-const app = express();
+var SQLiteStore = require('connect-sqlite3')(session);
+var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth');
+var app = express();
 
 app.locals.pluralize = require('pluralize');
-
-// Connect to DB
-db.sequelize.sync()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,13 +31,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
-  store: new MySQLStore({
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-  })
+  store: new SQLiteStore({ db: 'sessions.db', dir: './var/db' })
 }));
 app.use(passport.authenticate('session'));
 

@@ -23,10 +23,10 @@
         <form action="/event-delete" method="post">
             <label class="form-label">Select the event you would like to delete</label>
             <% let i = 0%>
-            <select name="eventIndex" id="" class="form-control">
+            <select name="id" id="" class="form-control">
                 <option value="">--please select event--</option>
                 <% for(i = 0; i < event.length; i++){ %>
-                    <option value="<%= i %>"><%= event[i].eventTitle %></option>
+                    <option value="<%= event[i].id %>"><%= event[i].title %></option>
                 <% } %>
             </select>
             

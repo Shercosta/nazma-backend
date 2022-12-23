@@ -23,10 +23,10 @@
         <form action="/trainerRemove" method="post">
             <label class="form-label">Select Trainer Profile</label>
             <% let i = 0%>
-            <select name="trainerProfile" id="" class="form-control">
+            <select name="id" id="" class="form-control">
                 <option value="">--please select profile--</option>
                 <% for(i = 0; i < profile.length; i++){ %>
-                    <option value="<%= i %>"><%= profile[i].name %></option>
+                    <option value="<%= profile[i].id %>"><%= profile[i].name %></option>
                 <% } %>
             </select>
             

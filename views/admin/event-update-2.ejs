@@ -20,30 +20,30 @@
 
     <div class="m-5">
         <h1>Create new Event for Event</h1>
-        <form action="/event-update-2" method="post">
+        <form action="/event-update-2?id=<%=inheritEventId%>" method="post">
             <label class="form-label mt-3">Event Title</label>
-            <input type="text" name="createEventTitle" class="form-control" value="<%= eventTitle %>" required>
+            <input type="text" name="inheritEventTitle" class="form-control" value="<%= inheritEventTitle %>" required>
 
             <label class="form-label mt-3">Address</label>
-            <input type="text" name="createEventAddress" class="form-control" value="<%= eventAddress %>" required>
+            <input type="text" name="inheritEventAddress" class="form-control" value="<%= inheritEventAddress %>" required>
 
             <label class="form-label mt-3">Time</label>
-            <input type="text" name="createEventTime" class="form-control" value="<%= eventTime %>" required>
+            <input type="text" name="inheritEventTime" class="form-control" value="<%= inheritEventTime %>" required>
 
             <label class="form-label mt-3">Month</label>
-            <input type="month" name="createEventMonth" class="form-control" required>
+            <input type="month" name="inheritEventMonth" class="form-control" required>
 
             <label class="form-label mt-3">Date</label>
-            <input type="text" name="createEventDate" class="form-control" value="<%= eventDate %>" required>
+            <input type="text" name="inheritEventDate" class="form-control" value="<%= inheritEventDate %>" required>
 
             <label class="form-label mt-3">Event Poster URL</label>
-            <input type="text" name="createEventPoster" class="form-control" value="<%= eventPoster %>" required>
+            <input type="text" name="inheritEventPoster" class="form-control" value="<%= inheritEventPoster %>" required>
 
             <label class="form-label mt-3">Event Registration URL</label>
-            <input type="text" name="crateEventRegis" class="form-control" value="<%= eventRegis %>" required>
+            <input type="text" name="inheritEventRegis" class="form-control" value="<%= inheritEventRegis %>" required>
 
             <label class="form-label mt-3">Content</label>
-            <textarea name="createEventDescription" cols="30" rows="10" class="form-control" required><%= eventDescription %></textarea>
+            <textarea name="inheritEventDescription" cols="30" rows="10" class="form-control" required><%= inheritEventDescription %></textarea>
             
             <button type="submit" class="btn btn-primary mt-3">Update following Event</button>
         </form>

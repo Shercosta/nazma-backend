@@ -25,7 +25,7 @@
 
     <div class="m-5">
         <h1>Edit / Update Images for Gallery</h1>
-        <form action="/gallery-update-2" method="post">
+        <form action="/gallery-update-2?id=<%=inheritGalleryId%>" method="post">
             <label class="form-label mt-3">Image URL</label>
             <input type="text" name="createGalleryImage" class="form-control" value="<%= inheritGalleryImage %>" required>
             
