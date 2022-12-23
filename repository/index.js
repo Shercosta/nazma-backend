@@ -3,6 +3,7 @@ const event = require("./event");
 const gallery = require("./gallery");
 const project = require("./project");
 const trainer = require("./trainer");
+const testimony = require("./testimony");
 const user = require("./user");
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
   gallery,
   project,
   trainer,
+  testimony,
   user,
 };

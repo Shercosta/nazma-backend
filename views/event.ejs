@@ -19,19 +19,19 @@
 
             <div class="row ticket">
                 <div class="col-lg-2">
-                    <p class="monthSmall monthLarge"><%= element.eventMonth %></p>
-                    <p class="dateSmall dateLarge"><%= element.eventDate %></p>
+                    <p class="monthSmall monthLarge"><%= element.month %></p>
+                    <p class="dateSmall dateLarge"><%= element.date %></p>
                 </div>
                 <div class="col-lg-5 imageTicket">
-                    <img src="<%= element.eventImage %>"
+                    <img src="<%= element.image %>"
                         class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-5">
                     <div class="ticketRight">
-                        <p class="eventTitle"><%= element.eventTitle %></p>
-                        <p class="eventLocation"><%= element.eventAddress %></p>
-                        <p class="eventTime"><%= element.eventTime %></p>
-                        <p class="evenSum"><%= element.eventDescription.slice(0,300) %>...</p>
+                        <p class="eventTitle"><%= element.title %></p>
+                        <p class="eventLocation"><%= element.address %></p>
+                        <p class="eventTime"><%= element.time %></p>
+                        <p class="evenSum"><%= element.description %>...</p>
                         <div class="ticketBreak">
                             <hr>
                             <a data-bs-toggle="modal" data-bs-target="#event-<%= i %>">
@@ -43,19 +43,19 @@
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel"><%= element.eventTitle %></h5>
+                                            <h5 class="modal-title" id="staticBackdropLabel"><%= element.title %></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="<%= element.eventImage %>"
+                                            <img src="<%= element.image %>"
                                                 alt="" class="img-fluid">
                                             <br><br>
-                                            <p class="eventLocation"><%= element.eventAddress %></p>
+                                            <p class="eventLocation"><%= element.address %></p>
                                             <br>
-                                            <p class="eventTime"><%= element.eventTime %></p>
+                                            <p class="eventTime"><%= element.time %></p>
                                             <br>
-                                            <p class="eventFullDesc"><%= element.eventDescription %></p>
+                                            <p class="eventFullDesc"><%= element.description %></p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"

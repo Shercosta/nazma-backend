@@ -23,10 +23,10 @@
         <form action="/blog-update" method="post">
             <label class="form-label">Select the article you would like to edit / update</label>
             <% let i = 0%>
-            <select name="articleNumber" id="" class="form-control">
+            <select name="id" id="" class="form-control">
                 <option value="">--please select article--</option>
                 <% for(i = 0; i < articles.length; i++){ %>
-                    <option value="<%= i %>"><%= articles[i].title %></option>
+                    <option value="<%= articles[i].id %>"><%= articles[i].title %></option>
                 <% } %>
             </select>
             

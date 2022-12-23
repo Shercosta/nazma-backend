@@ -23,10 +23,10 @@
         <form action="/gallery-update" method="post">
             <label class="form-label">Select the Images you would like to edit / update</label>
             <% let i = 0%>
-            <select name="arrayIndex" id="" class="form-control">
+            <select name="id" id="" class="form-control">
                 <option value="">--please select image--</option>
                 <% for(i = 0; i < gallery.length; i++){ %>
-                    <option value="<%= i %>"><%= gallery[i].caption %></option>
+                    <option value="<%= gallery[i].id %>"><%= gallery[i].caption %></option>
                 <% } %>
             </select>
             

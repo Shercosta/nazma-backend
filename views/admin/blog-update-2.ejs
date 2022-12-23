@@ -25,7 +25,7 @@
 
     <div class="m-5">
         <h1>Edit / Update Article for Blog</h1>
-        <form action="/blog-update-2" method="post">
+        <form action="/blog-update-2?id=<%=inheritBlogId%>" method="post">
             <label class="form-label mt-3">Title</label>
             <input type="text" name="createBlogTitle" class="form-control" value="<%= inheritBlogTitle %>" required>
 
